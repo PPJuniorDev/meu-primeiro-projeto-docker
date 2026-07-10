@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    container_name: meu-site-pelo-compose
+    ports:
+      - "8082:80"
+
+  banco:
+    image: redis:alpine
+    container_name: meu-banco-redis
+    ports:
+      - "6379:6379"
